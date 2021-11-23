@@ -1,0 +1,20 @@
+text_a	text_b	label
+开初婚未育证明怎么弄？	初婚未育情况证明怎么开？	1
+谁知道她是网络美女吗？	爱情这杯酒谁喝都会醉是什么歌	0
+人和畜生的区别是什么？	人与畜生的区别是什么！	1
+男孩喝女孩的尿的故事	怎样才知道是生男孩还是女孩	0
+
+
+###########################################################################
+
+Samples of the dev set for LCQMC (a Large-scale Chinese Question Matching Corpus). For copyrights concerns, I did not circulate it here. You can request a copy of it by submitting an application form: http://icrc.hitsz.edu.cn/info/1037/1146.htm. 
+
+Alternatively, to access the full train set and dev set, you can install paddlenlp (https://github.com/PaddlePaddle/PaddleNLP) and call:
+
+from paddlenlp.datasets import load_dataset
+train_ds, dev_ds, test_ds = load_dataset('lcqmc', splits=['train', 'dev', 'test'])
+
+Please note that, the test set obtained this way are deprived of labels. 
+
+
+###########################################################################

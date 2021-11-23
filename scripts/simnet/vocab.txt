@@ -1,0 +1,21 @@
+[PAD]
+[UNK]
+，
+的
+。
+、
+是
+了
+在
+有
+你
+可以
+
+##########################################################################################
+
+The vocab.txt was compiled directly from the BaiduKnowsUnigram.json with over 1.5 million unique words. I deleted the contents to make the file light. 
+
+Please note that, when re-compiling the vocab, you should add two special tokens to the first two lines as in this file: [PAD] and [UNK]. You can choose to or not to delete the special tokens I used in the BaiduKnowsUnigram.json: <START>, <END>, and <UNK>. Preserving them will do not any harm. 
+
+
+##########################################################################################

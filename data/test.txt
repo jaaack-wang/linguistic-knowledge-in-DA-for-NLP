@@ -1,0 +1,22 @@
+text_a	text_b	label
+谁有狂三这张高清的	这张高清图，谁有	0
+英雄联盟什么英雄最好	英雄联盟最好英雄是什么	1
+这是什么意思，被蹭网吗	我也是醉了，这是什么意思	0
+现在有什么动画片好看呢？	现在有什么好看的动画片吗？	1
+请问晶达电子厂现在的工资待遇怎么样要求有哪些	三星电子厂工资待遇怎么样啊	0
+
+
+
+###########################################################################
+
+Samples of test dev set for LCQMC (a Large-scale Chinese Question Matching Corpus). For copyrights concerns, I did not circulate it here. You can request a copy of it by submitting an application form: http://icrc.hitsz.edu.cn/info/1037/1146.htm. 
+
+Alternatively, to access the full train set and dev set, you can install paddlenlp (https://github.com/PaddlePaddle/PaddleNLP) and call:
+
+from paddlenlp.datasets import load_dataset
+train_ds, dev_ds, test_ds = load_dataset('lcqmc', splits=['train', 'dev', 'test'])
+
+Please note that, the test set obtained this way are deprived of labels. 
+
+
+###########################################################################
