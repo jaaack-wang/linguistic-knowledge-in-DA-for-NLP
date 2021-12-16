@@ -14,7 +14,7 @@ Structure:
 In the first draft of the paper, there were two unintentional errors I made when augmenting train sets as can be seen below:
 
 - First, I forgot to pass a parameter called out_num_each when calling the `augModel.augment` function in the second time. This mistake should not be very harmful. 
--  Second, I did not do cross pairing at all when augmenting texts as described in my paper! This is a very severe mistake because not doing cross pairing will make one side of the texts always being paried with their augmented texts. When the original labels are 0 (non-matching), but the augmented texts happen to match with the original texts, that creates a great deal of false matching augmented text pairs. In other words, not doing cross pairing is likely to produce significantly more label-changing examples, which in the first draft were mistakenly analyzed as the limitations of random text editing operations for question matching task. **Therefore, when reading and citing the paper, please refer to the second version and discard the first one!**
+-  Second, I did not do cross pairing at all when augmenting texts as described in my paper! This is a very severe mistake because not doing cross pairing will make one side of the texts always being paried with their augmented texts. When the original labels are 0s (non-matching), but the augmented texts are supposed to match with the original texts, that creates a great deal of false matching augmented text pairs. In other words, not doing cross pairing is likely to produce significantly more label-changing examples, which in the first draft were mistakenly analyzed as the limitations of random text editing operations for question matching task. **Therefore, when reading and citing the paper, please refer to the second version and discard the first one!**
 
 <p align='center'>
  <img align="center" width='750' height='250' src="./img/error.png">
@@ -27,7 +27,7 @@ The paper examines the role of linguistic knowledge in data augmentation for nat
 
 The basic findings are twofold:
 - The revised EDA program enhanced with a n-gram language model did not lead to better test set classification results in terms of accuracy, precision, recall, and F1 scores. This is also true even when the five text editing operations are applied and compared separately for the two revised programs (as shown in the ablation study). This means that adding probabilistic linguistic knowledge as constrains is not very useful, although doing so does lead to more readable and higher-quality augmented texts.
-- Unlike [the EDA authors' findings](https://arxiv.org/abs/1901.11196) on 5 much simpler sentiment-related and text type classification tasks, this study did not find general performance gains across train sets of varying sizes after the five text editing operations or any one of it were applied. Intead, the classification models always need to see sufficient amounts of traning examples (e.g., at least 50k, or at least 100k) so that they can mediate the negative impact of false matching augmented text pairs and generalize better. This shows a limitation of random text editing perturbations used a DA approach, especially for text matching, which is more sensitive to and subject to some tiny semantic changes caused by text augmentation.  
+- Unlike [the EDA authors' findings](https://arxiv.org/abs/1901.11196) on 5 much simpler sentiment-related and text type classification tasks, this study did not find general performance gains across train sets of varying sizes after the five text editing operations or any one of it were applied. Instead, the classification models always need to see sufficient amounts of traning examples (e.g., at least 50k, or at least 100k) so that they can mediate the negative impact of false matching augmented text pairs and generalize better. This shows a limitation of random text editing perturbations used a DA approach, especially for text matching, which is more sensitive to and subject to some tiny semantic changes caused by text augmentation.  
 
 
 <a name='3'></a>
@@ -36,7 +36,7 @@ The basic findings are twofold:
 The table below shows the test set accuracies of the five classification models trained on the three types of train sets of varying size. REDA: Revised EDA program. <img src="https://render.githubusercontent.com/render/math?math=$REDA_{+N-gram}$"> is the REDA program combined with a n-gram language model. 
  
  <p align='center'>
- <img align="center" width='750' height='450' src="./img/accuracy.png">
+ <img align="center" src="./img/accuracy.png">
 </p>
 
 The table below shows the average precision, recall, and f1 scores for the five classification models on the three types of train sets.
@@ -48,7 +48,7 @@ The table below shows the average precision, recall, and f1 scores for the five 
 The figure below shows the average test set accuracy scores of the five classification models under different conditions (i.e., text editing type, training data size) for the three types of train sets. The sixth plot averages the statistics of the previous five plots. 
 
 <p align='center'>
- <img align="center" width='750' height='450' src="./img/ablation_accuracy.png">
+ <img align="center" src="./img/ablation_accuracy.png">
 </p>
 
 <a name='4'></a>
@@ -64,7 +64,7 @@ Below are three programs created in this study. For the classification models, I
 <a name='5'></a>
 ## Citation
 
-```cmd
+```text
 @misc{wang2021linguistic,
       title={Linguistic Knowledge in Data Augmentation for Natural Language Processing: An Example on Chinese Question Matching}, 
       author={Zhengxiang Wang},
