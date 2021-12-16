@@ -16,9 +16,9 @@ In the first draft of the paper, there were two unintentional errors I made when
 - First, I forgot to pass a parameter called out_num_each when calling the `augModel.augment` function in the second time. This mistake should not be very harmful. 
 -  Second, I did not do cross pairing at all when augmenting texts as described in my paper! This is a very severe mistake because not doing cross pairing will make one side of the texts always being paried with their augmented texts. When the original labels are 0 (non-matching), but the augmented texts happen to match with the original texts, that creates a great deal of false matching augmented text pairs. In other words, not doing cross pairing is likely to produce significantly more label-changing examples, which in the first draft were mistakenly analyzed as the limitations of random text editing operations for question matching task. **Therefore, when reading and citing the paper, please refer to the second version and discard the first one!**
 
-
- <img align="center" width='500' height='250' src="./img/error.png">
-
+<p align='center'>
+ <img align="center" width='750' height='250' src="./img/error.png">
+</p>
 
 <a name='2'></a>
 ## Description 
@@ -34,17 +34,22 @@ The basic findings are twofold:
 ## A quick look at the results  
 
 The table below shows the test set accuracies of the five classification models trained on the three types of train sets of varying size. REDA: Revised EDA program. <img src="https://render.githubusercontent.com/render/math?math=$REDA_{+N-gram}$"> is the REDA program combined with a n-gram language model. 
- <img align="center" width='500' height='250' src="./img/accuracy.png">
-
+ 
+ <p align='center'>
+ <img align="center" width='750' height='450' src="./img/accuracy.png">
+</p>
 
 The table below shows the average precision, recall, and f1 scores for the five classification models on the three types of train sets.
- <img align="center" width='500' height='250' src="./img/pre_recall_f1.png">
 
+<p align='center'>
+ <img align="center" src="./img/pre_recall_f1.png">
+</p>
 
 The figure below shows the average test set accuracy scores of the five classification models under different conditions (i.e., text editing type, training data size) for the three types of train sets. The sixth plot averages the statistics of the previous five plots. 
 
- <img align="center" width='500' height='250' src="./img/ablation_precision.png">
-
+<p align='center'>
+ <img align="center" width='750' height='450' src="./img/ablation_precision.png">
+</p>
 
 <a name='4'></a>
 ## Built programs
