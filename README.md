@@ -48,7 +48,7 @@ The table below shows the average precision, recall, and f1 scores for the five 
 The figure below shows the average test set accuracy scores of the five classification models under different conditions (i.e., text editing type, training data size) for the three types of train sets. The sixth plot averages the statistics of the previous five plots. 
 
 <p align='center'>
- <img align="center" width='750' height='450' src="./img/ablation_precision.png">
+ <img align="center" width='750' height='450' src="./img/ablation_accuracy.png">
 </p>
 
 <a name='4'></a>
