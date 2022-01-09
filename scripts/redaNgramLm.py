@@ -63,13 +63,13 @@ class REDA_NgramLM:
         def _filter(item):
             '''A func to make sure that the data structure is all right as some operation might fail to augment 
             the text (e.g., too short, no synonyms etc.)'''
+            if out_num_each == 1:
+                return [item]
             if isinstance(item, str):
                 return []
             if not out_str and isinstance(item[0], str):
-                if len(item) == len(words):
-                    for i in range(words_num):
-                        if item[i] == words[i]:
-                            return []
+                if ''.join(item) == ''.join(words):
+                    return []
                 return [item]
             return item
         
