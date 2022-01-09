@@ -6,6 +6,7 @@ Structure:
 - [3. A quick look at the results](#3)
 - [4. Built programs](#4)
 - [5. Citation](#5)
+- [6. Updates](#6)
 
 
 <a name='1'></a>
@@ -74,3 +75,8 @@ Below are three programs created in this study. For the classification models, I
       primaryClass={cs.CL}
 }
 ```
+
+<a name='6'></a>
+## Updates
+
+- (Jan 8th, 2022): In my paper, I said, the "REDA program does not preprocess the input text by removing punctuations or by introducing stop words" because I "did not find this type of preprocessing helpful and necessary in general or makes sense for the basic idea of random text editing" operations, which is very true for Chinese. However, for languages like English where the case of letters (e.g., upper or lower) can affect machines finding synonyms, there may be a need to lower the words before searching for synonyms. Other than that, preprocessing should be avoided for **RANDOM** text editing operations.
