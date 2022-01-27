@@ -1,6 +1,6 @@
 ## Description
 
-This folder stores code, data, and experimental results for additional tests on English question matching when four supervised classification models (`ERNIE-Gram` was excluded here because it was expensive to train and may not reveal anything interesting) are trained on three types of train sets of varying sizes: un-augmented train sets, train sets augmented by the `reda` program, and train sets augmented by the `reda` program combined with a `ngram` model. 
+This folder stores code, data, and experimental results for additional tests on English question matching where four supervised classification models (`ERNIE-Gram` was excluded here because it was expensive to train and may not reveal anything interesting) are trained on three types of train sets of varying sizes: un-augmented train sets, train sets augmented by the `reda` program, and train sets augmented by the `reda` program combined with a `ngram` model. 
 
 The [Quora Question Pairs Dataset](https://quoradata.quora.com/First-Quora-Dataset-Release-Question-Pairs) is used here for text augmentation and model training. The `get_data.ipynb` file provides how the dataset is split into three parts (train, dev, and test) and how an English vocab is built out of the train set using the `TextVectorizer` class method inside the `utils.py`. The `Ngrams_Aug_Texts` folder provides details on how the n-gram language model for English is trained and how the augmented train sets are built. 
 
