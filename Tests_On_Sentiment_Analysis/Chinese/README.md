@@ -1,6 +1,6 @@
 ## Description
 
-This folder stores code, data, and experimental results for additional tests on Chinese sentiment analysis when four supervised classification models (`ERNIE-Gram` was excluded here because it was expensive to train and may not reveal anything interesting) are trained on three types of train sets of varying sizes: un-augmented train sets, train sets augmented by the `reda` program, and train sets augmented by the `reda` program combined with a `ngram` model. 
+This folder stores code, data, and experimental results for additional tests on Chinese sentiment analysis where four supervised classification models (`ERNIE-Gram` was excluded here because it was expensive to train and may not reveal anything interesting) are trained on three types of train sets of varying sizes: un-augmented train sets, train sets augmented by the `reda` program, and train sets augmented by the `reda` program combined with a `ngram` model. 
 
 The [Chinese Sentiment Corpus](https://ccc.inaoep.mx/~villasen/bib/An%20empirical%20study%20of%20sentiment%20analysis%20for%20chinese%20documents.pdf) is used here for text augmentation and model training. My [text-classification-explained](https://github.com/jaaack-wang/text-classification-explained) repository explains how the dataset can be obtained, which also provides the four models for training Chinese sentiment classifier as in the `paddle_models` folder.
 
@@ -57,6 +57,6 @@ I only trained four classifcation models (BoW, CNN, LSTM-RNN, GRU-RNN), the deta
 
 - There were minor problems identified during model training: there were a few training examples from the augmented train sets had empty text, which renderred an error when running the RNN models. The statistics reported above were adjusted accordingly. These file include:
 
-<p>
-<img src="./imgs/a_problem.png"
+<p align='center'>
+<img width='500px' height='250px' src="./imgs/a_problem.png"
 </p>
