@@ -26,13 +26,29 @@ The [Quora Question Pairs Dataset](https://quoradata.quora.com/First-Quora-Datas
 
 ## Results
 
-I only trained four classifcation models (BoW, CNN, LSTM-RNN, GRU-RNN), using the same models and same set of hyperparameters when training them. ERNIE-Ggram model or other pre-trained models are not trained because it is expensive to do and it seems clear that they will not affect how the final results will be interpreted. `Training.ipynb` is a record of training these four models (on Baidu Machine Learning Codelab):
+I only trained four classifcation models (BoW, CNN, LSTM-RNN, GRU-RNN), using the same models and same set of hyperparameters when training them. ERNIE-Ggram model or other pre-trained models are not trained because it is expensive to do and it seems clear that they will not affect how the final results will be interpreted. `Training.ipynb` is a record of training these four models (on Baidu Machine Learning Codelab). The full statistics are in the `ModelPerformances.xlsx` file.
 
-Results coming soon. 
+- Test set accuracies of the four classification models trained on the three types of train sets of varying size.
+
+<p>
+
+<img src="./imgs/accu.png">
+
+</p>
+
+- Average test set precision, recall, and f1 scores for the four classification models on the three types of train sets.
+
+<p>
+
+<img src="./imgs/pre_recall_f1.png">
+
+</p>
 
 ## Findings
 
-Forthcoming.
+- Unlike the preprint, this time the ngram language model helps the reda-led classification models to maintain a small but consistent performance gain (e.g., on average) in accuracy and precision. Nevertheless, the overall differences between classification models trained on these two types of augmented train sets are still small, considering all the four metrics.
+
+- Like the preprint, models trained on the augmented train sets need to see a sufficiently large number of training examples (the threshold here is somewhere between 100k ~ 150k) so that the augmented train sets can be helpful or bring performance gains. This makes random text editing an impractical data augmentation approach for question matching. 
 
 ## Notes
 
