@@ -53,6 +53,11 @@ Below are three programs created in this study. For the classification models, I
 <a name='4'></a>
 ## Updates
 
+### Sep 4, 2022: a systematic mistake corrected 
+
+Due to carelessness, I accidentally mistook predicted labels for the true labels in code, which caused a systematic mistake in the paper when calculating the precision and recall scores (should have been swapped). This mistake, however, did not occur in the follow-up experiments as shown in the `Tests_On_English_QMatching` folder and `Tests_On_Sentiment_Analysis` folder. The paper will be updated accordingly as well. 
+
+
 ### Jan 26, 2022: New tests on English and other tasks!
 
 I run additional tests on English Question matching and other classification tasks (currently, Chinese sentiment analysis). The test code, data, and results can be found in the newly added folders that start with "Tests_On_...". The current results on English Question matching appear to support the basic findings made in my paper! That is, random text editing operation is not a reliable and generally applicable means of text augmentation, especially when augmenting texts for text matching classification task. There is a need of sufficiently large number of training examples in order to allow the augmented train sets to improve the final performances on the test set, which is not practical because most of the time we do text augmentation when the data set is small. If that is the case, we will be better off just using transfer learning, instead of text augmentation.
